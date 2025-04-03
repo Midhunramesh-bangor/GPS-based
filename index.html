@@ -14,20 +14,33 @@
       vr-mode-ui="enabled: false"
       arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
     >
+      <!-- 3D Model of Tree -->
       <a-asset-item 
         id="tree" 
-        src="/astronauta-astronaut_codm_call_of_duty/scene.gltf">
+        src="3d_location/scene.gltf">
       </a-asset-item>
       
       <a-entity 
         look-at="[gps-camera]" 
-        position="1.4 1 -1" 
+        position="0 60 0"
+        scale="3 3 3" 
         rotation="0 90 0" 
         gltf-model="#tree" 
-        scale="1.6 1.6 1.6" 
-        gps-entity-place="latitude:53.2281948; longitude:-4.1299407;">
+        gps-entity-place="latitude:53.2298197; longitude:-4.1241927;">, 
       </a-entity>
       
+      <!-- Text to Display -->
+      <a-text
+        value="The 19th century Clock Tower,
+        High Street, Bangor,Gwynedd,
+        Wales, United Kingdom."
+        look-at="[gps-camera]"
+        position="0 30 0"
+        scale="10 10 10"
+        gps-entity-place="latitude:53.2298197; longitude:-4.1241927;">
+      </a-text>
+
+      <!-- Camera for GPS Tracking -->
       <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
   </body>
