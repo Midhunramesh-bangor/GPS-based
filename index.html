@@ -22,8 +22,8 @@
       
       <a-entity 
         look-at="[gps-camera]" 
-        position="0 40 0"
-        scale="3 3 3" 
+        position="0 33 0"
+        scale="2 2 2" 
         rotation="0 0 0" 
         gltf-model="#tree" 
         gps-entity-place="latitude:53.2278675; longitude:-4.1301131;">, 
@@ -35,14 +35,14 @@
         High Street, Bangor,Gwynedd,
         Wales, United Kingdom."
         look-at="[gps-camera]"
-        position="0 30 0"
+        position="0 32 0"
         align="center"
-        scale="15 15 15"
-        gps-entity-place="latitude:53.2298197; longitude:-4.1241927;">
+        scale="3 3 3"
+        gps-entity-place="latitude:53.2278675; longitude:-4.1301131;">
       </a-text>
 
       <!-- Camera for GPS Tracking -->
-      <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> </a-camera> 
+       <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> </a-camera>
       <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
   </body>
